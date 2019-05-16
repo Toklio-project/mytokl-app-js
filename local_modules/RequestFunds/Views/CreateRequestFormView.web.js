@@ -542,7 +542,7 @@ class CreateRequestFormView extends View
 			if (typeof raw_amount_String !== 'undefined' && raw_amount_String) {
 				amount_Number = +raw_amount_String // turns into Number, apparently
 				if (isNaN(amount_Number)) {
-					self.validationMessageLayer.SetValidationError("Please enter a valid amount of Monero.")
+					self.validationMessageLayer.SetValidationError("Please enter a valid amount of Toklio.")
 					return
 				}
 				if (amount_Number <= 0) {

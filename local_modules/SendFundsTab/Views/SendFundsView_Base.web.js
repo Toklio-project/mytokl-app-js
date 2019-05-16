@@ -43,17 +43,17 @@ const commonComponents_actionButtons = require('../../MMAppUICommonComponents/ac
 //
 const JustSentTransactionDetailsView = require('./JustSentTransactionDetailsView.web')
 //
-const monero_sendingFunds_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_sendingFunds_utils')
+const monero_sendingFunds_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_sendingFunds_utils')
 const monero_openalias_utils = require('../../OpenAlias/monero_openalias_utils')
-const monero_paymentID_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_paymentID_utils')
-const monero_config = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_config')
-const monero_amount_format_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_amount_format_utils')
+const monero_paymentID_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_paymentID_utils')
+const monero_config = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_config')
+const monero_amount_format_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_amount_format_utils')
 //
 const jsQR = require('jsqr')
 const monero_requestURI_utils = require('../../MoneroUtils/monero_requestURI_utils')
 //
 let Currencies = require('../../CcyConversionRates/Currencies')
-let JSBigInt = require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/biginteger').BigInteger // important: grab defined export
+let JSBigInt = require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/biginteger').BigInteger // important: grab defined export
 //
 let rateServiceDomainText = "cryptocompare.com" 
 //
@@ -232,7 +232,7 @@ class SendFundsView extends View
 		{
 			const labelLayer = commonComponents_forms.New_fieldTitle_labelLayer("FROM", self.context)
 			{
-				const tooltipText = `Monero makes transactions<br/>with your "available outputs",<br/>so part of your balance will<br/>be briefly locked and then<br/>returned as change.`
+				const tooltipText = `Toklio makes transactions<br/>with your "available outputs",<br/>so part of your balance will<br/>be briefly locked and then<br/>returned as change.`
 				const view = commonComponents_tooltips.New_TooltipSpawningButtonView(tooltipText, self.context)
 				const layer = view.layer
 				labelLayer.appendChild(layer) // we can append straight to labelLayer as we don't ever change its innerHTML
@@ -322,7 +322,7 @@ class SendFundsView extends View
 			breakingDiv.appendChild(layer)
 		}
 		{
-			const tooltipText = "Based on Monero network<br/>fee estimate (not final).<br/><br/>MyMonero does not charge<br/>a transfer service fee."
+			const tooltipText = "Based on Toklio network<br/>fee estimate (not final).<br/><br/>MyMonero does not charge<br/>a transfer service fee."
 			const view = commonComponents_tooltips.New_TooltipSpawningButtonView(tooltipText, self.context)
 			const layer = view.layer
 			breakingDiv.appendChild(layer)
@@ -347,7 +347,7 @@ class SendFundsView extends View
 		const labelLayer = commonComponents_forms.New_fieldTitle_labelLayer("TO", self.context)
 		labelLayer.style.marginTop = "17px" // to square with MEMO field on Send Funds
 		{
-			const tooltipText = `Drag &amp; drop QR codes<br/>to auto-fill.<br/><br/>Please double-check<br/>your recipient info as<br/>Monero transfers are<br/>not yet&nbsp;reversible.`
+			const tooltipText = `Drag &amp; drop QR codes<br/>to auto-fill.<br/><br/>Please double-check<br/>your recipient info as<br/>Toklio transfers are<br/>not yet&nbsp;reversible.`
 			const view = commonComponents_tooltips.New_TooltipSpawningButtonView(tooltipText, self.context)
 			const layer = view.layer
 			labelLayer.appendChild(layer) // we can append straight to labelLayer as we don't ever change its innerHTML
@@ -506,7 +506,7 @@ class SendFundsView extends View
 			const labelLayer = commonComponents_forms.New_fieldTitle_labelLayer("PRIORITY", self.context)
 			labelLayer.style.marginTop = "4px"
 			{
-				const tooltipText = `You can pay the Monero<br/>network a higher fee to<br/>have your transfers<br/>confirmed faster.`
+				const tooltipText = `You can pay the Toklio<br/>network a higher fee to<br/>have your transfers<br/>confirmed faster.`
 				const view = commonComponents_tooltips.New_TooltipSpawningButtonView(tooltipText, self.context)
 				const layer = view.layer
 				labelLayer.appendChild(layer) // we can append straight to labelLayer as we don't ever change its innerHTML
@@ -711,7 +711,7 @@ class SendFundsView extends View
 			div.style.fontWeight = "300"
 			div.style.webkitFontSmoothing = "subpixel-antialiased"
 			//
-			div.innerHTML = "Drag and drop a<br/>Monero Request Code "
+			div.innerHTML = "Drag and drop a<br/>Toklio Request Code "
 			self.qrCodeInputs_contentView.layer.appendChild(div)
 		}
 		self.addSubview(view)
@@ -927,7 +927,7 @@ class SendFundsView extends View
 	//
 	Navigation_Title()
 	{
-		return "Send Monero"
+		return "Send Toklio"
 	}
 	Navigation_New_RightBarButtonView()
 	{
@@ -1233,7 +1233,7 @@ class SendFundsView extends View
 		if (self.context.settingsController.hasBooted != true) {
 			throw "_givenBootedSettingsController_setCcySelectLayer_initialValue called but !self.context.settingsController.hasBooted"
 		}
-		const amountCcy = self.context.settingsController.displayCcySymbol || "XMR"
+		const amountCcy = self.context.settingsController.displayCcySymbol || "TOKL"
 		self.ccySelectLayer.value = amountCcy
 	}
 	_clearForm()
@@ -1428,7 +1428,7 @@ class SendFundsView extends View
 		const wallet = self.walletSelectView.CurrentlySelectedRowItem
 		{
 			if (typeof wallet === 'undefined' || !wallet) {
-				_trampolineToReturnWithValidationErrorString("Please create a wallet to send Monero.")
+				_trampolineToReturnWithValidationErrorString("Please create a wallet to send Toklio.")
 				return
 			}
 		}
@@ -1860,7 +1860,7 @@ class SendFundsView extends View
 			try {
 				address__decode_result = self.context.monero_utils.decode_address(enteredPossibleAddress, self.context.nettype)
 			} catch (e) {
-				console.warn("Couldn't decode as a Monero address.", e)
+				console.warn("Couldn't decode as a Toklio address.", e)
 				self.isResolvingSendTarget = false
 				self.set_isSubmittable_needsUpdate()
 				return // just return silently
@@ -2155,7 +2155,7 @@ class SendFundsView extends View
 		}
 		// ^ so we don't get torn down while dialog open
 		self.context.filesystemUI.PresentDialogToOpenOneImageFile(
-			"Open Monero Request",
+			"Open Toklio Request",
 			function(err, absoluteFilePath)
 			{
 				self.context.userIdleInWindowController.ReEnable_userIdle()					

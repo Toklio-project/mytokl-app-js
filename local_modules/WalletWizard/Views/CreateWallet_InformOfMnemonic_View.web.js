@@ -33,7 +33,7 @@ const commonComponents_navigationBarButtons = require('../../MMAppUICommonCompon
 const commonComponents_walletMnemonicBox = require('../../MMAppUICommonComponents/walletMnemonicBox.web')
 const commonComponents_hoverableCells = require('../../MMAppUICommonComponents/hoverableCells.web')
 //
-const mnemonic_languages = require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/mnemonic_languages')
+const mnemonic_languages = require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/mnemonic_languages')
 //
 const BaseView_AWalletWizardScreen = require('./BaseView_AWalletWizardScreen.web')
 //
@@ -81,7 +81,7 @@ class CreateWallet_InformOfMnemonic_View extends BaseView_AWalletWizardScreen
 			layer.style.webkitFontSmoothing = "subpixel-antialiased"
 			layer.style.wordBreak = "break-word"
 			layer.style.color = "#F5E67E"
-			const text = "NOTE: This is the only way to access your wallet if you switch devices, use another Monero wallet app, or lose your&nbsp;data."
+			const text = "NOTE: This is the only way to access your wallet if you switch devices, use another Toklio wallet app, or lose your&nbsp;data."
 			layer.innerHTML = text
 			self.layer.appendChild(layer)
 		}

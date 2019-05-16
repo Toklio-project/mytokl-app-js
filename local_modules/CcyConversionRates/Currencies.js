@@ -28,13 +28,13 @@
 
 "use strict"
 //
-let monero_config = require('../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_config')
-let monero_amount_format_utils = require('../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_amount_format_utils')
-const JSBigInt = require('../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/biginteger').BigInteger
+let monero_config = require('../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_config')
+let monero_amount_format_utils = require('../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_amount_format_utils')
+const JSBigInt = require('../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/biginteger').BigInteger
 //
 let ccySymbolsByCcy = exports.ccySymbolsByCcy = 
 {
-	XMR: "XMR", // included for completeness / convenience / API
+	XMR: "TOKL", // included for completeness / convenience / API
 	USD: "USD",
 	AUD: "AUD",
 	BRL: "BRL",

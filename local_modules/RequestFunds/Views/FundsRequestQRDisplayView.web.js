@@ -118,10 +118,10 @@ class FundsRequestQRDisplayView extends View
 			if (amount) {
 				innerHTML += amount + " " + amountCcySymbol
 				if (amountCcySymbol != Currencies.ccySymbolsByCcy.XMR) {
-					innerHTML += " in Monero"
+					innerHTML += " in Toklio"
 				}
 			} else {
-				innerHTML += "Monero"
+				innerHTML += "Toklio"
 			}
 			if (payment_id != null && payment_id != "" && typeof payment_id !== "undefined") {
 				innerHTML += " with payment ID " + payment_id
@@ -162,8 +162,8 @@ class FundsRequestQRDisplayView extends View
 					}
 					self.context.filesystemUI.PresentDialogToSaveBase64ImageStringAsImageFile(
 						imgDataURIString,
-						"Save Monero Request",
-						"Monero request",
+						"Save Toklio Request",
+						"Toklio request",
 						function(err)
 						{
 							if (err) {

@@ -32,8 +32,8 @@ const View = require('../../Views/View.web')
 const commonComponents_tables = require('../../MMAppUICommonComponents/tables.web')
 const commonComponents_forms = require('../../MMAppUICommonComponents/forms.web')
 const commonComponents_navigationBarButtons = require('../../MMAppUICommonComponents/navigationBarButtons.web')
-const monero_amount_format_utils = require("../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_amount_format_utils");
-const JSBigInt = require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/biginteger').BigInteger
+const monero_amount_format_utils = require("../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_amount_format_utils");
+const JSBigInt = require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/biginteger').BigInteger
 //
 class TransactionDetailsView extends View
 {
@@ -83,7 +83,7 @@ class TransactionDetailsView extends View
 		{
 			const layer = commonComponents_tables.New_inlineMessageDialogLayer(
 				self.context, 
-				"Your Monero is on its way.",
+				"Your Toklio is on its way.",
 				false // for now
 			)
 			layer.style.width = "calc(100% - 0px)"

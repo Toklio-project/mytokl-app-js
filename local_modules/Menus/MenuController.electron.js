@@ -149,7 +149,7 @@ class MenuController extends MenuController_Abstract
 						if (isLinux) { // linux has no support for updates in the app afaik so this is redirected to the downloads page - the user is advised to update via their pkg mgmt system - can that be integrated?
 							const shell = require('electron').shell
 							shell.openExternal( // maybe share this constant with AppUpdatesController.electron.main and anything else that may need it in the future but file it under 'releases' and not 'release notes' despite its usage in AppUpdatesC
-								"https://github.com/mymonero/mymonero-app-js/releases"
+								"https://github.com/Toklio-project/mytokl-app-js/releases"
 							)
 							return;
 						}
@@ -312,7 +312,7 @@ class MenuController extends MenuController_Abstract
 					label: 'MyMonero.com',
 					click: function(menuItem, browserWindow, event)
 					{
-						shell.openExternal('https://mymonero.com/')
+						shell.openExternal('https://tokl.io/')
 					}
 				},
 				{
@@ -329,7 +329,7 @@ class MenuController extends MenuController_Abstract
 					label: 'Support',
 					click: function(menuItem, browserWindow, event)
 					{
-						shell.openExternal('https://mymonero.com/?open_support=1')
+						shell.openExternal('https://tokl.io/?open_support=1')
 					}
 				},
 				{
@@ -349,14 +349,14 @@ class MenuController extends MenuController_Abstract
 					label: 'Privacy Policy',
 					click: function(menuItem, browserWindow, event)
 					{
-						shell.openExternal('https://mymonero.com/privacy')
+						shell.openExternal('https://tokl.io/privacy')
 					}
 				},
 				{
 					label: 'Terms of Use',
 					click: function(menuItem, browserWindow, event)
 					{
-						shell.openExternal('https://mymonero.com/terms')
+						shell.openExternal('https://tokl.io/terms')
 					}
 				}
 			]

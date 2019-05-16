@@ -35,7 +35,7 @@ const Emojis = require('../../Emoji/emoji_set').Emojis
 const persistable_object_utils = require('../../DocumentPersister/persistable_object_utils')
 const contact_persistence_utils = require('./contact_persistence_utils')
 //
-const monero_paymentID_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_paymentID_utils')
+const monero_paymentID_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_paymentID_utils')
 //
 const monero_requestURI_utils = require('../../MoneroUtils/monero_requestURI_utils')
 const QRCode = require('qrcode')
@@ -251,7 +251,7 @@ class Contact extends EventEmitter
 	{
 		const self = this
 		//
-		return `${self.constructor.name}<${self._id}> "${self.emoji}  ${self.fullname}, XMR addr: ${self.address}, payment id: ${self.payment_id}".`
+		return `${self.constructor.name}<${self._id}> "${self.emoji}  ${self.fullname}, TOKL addr: ${self.address}, payment id: ${self.payment_id}".`
 	}
 	//
 	EventName_booted()

@@ -197,7 +197,7 @@ class Controller extends EventEmitter
 						{
 							const shell = require('electron').shell
 							shell.openExternal(
-								"https://github.com/mymonero/mymonero-app-js/releases"
+								"https://github.com/Toklio-project/mytokl-app-js/releases"
 							)
 						})
 					}

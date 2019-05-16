@@ -87,8 +87,8 @@ module.exports =
 						'MyMoneroCoreCpp_WASM.wasm',
 						'MyMoneroCoreBridge.js',
 						'MyMoneroCoreBridgeClass.js',
-						'mymonero-core-js/tests',
-						'mymonero_libapp_js/tests',
+						'mytokl-core-js/tests',
+						'mytokl_libapp_js/tests',
 					]
 				},
 				use: [

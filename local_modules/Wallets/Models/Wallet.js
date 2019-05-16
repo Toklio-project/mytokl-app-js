@@ -33,12 +33,12 @@ const EventEmitter = require('events')
 const extend = require('util')._extend
 const uuidV1 = require('uuid/v1')
 //
-const monero_txParsing_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_txParsing_utils')
-const monero_sendingFunds_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_sendingFunds_utils')
-const JSBigInt = require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/biginteger').BigInteger
-const monero_amount_format_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_amount_format_utils')
-const monero_config = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_config')
-const mnemonic_languages = require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/mnemonic_languages')
+const monero_txParsing_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_txParsing_utils')
+const monero_sendingFunds_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_sendingFunds_utils')
+const JSBigInt = require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/biginteger').BigInteger
+const monero_amount_format_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_amount_format_utils')
+const monero_config = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_config')
+const mnemonic_languages = require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/mnemonic_languages')
 //
 const persistable_object_utils = require('../../DocumentPersister/persistable_object_utils')
 const wallet_persistence_utils = require('./wallet_persistence_utils')
@@ -46,11 +46,11 @@ const WalletHostPollingController = require('../Controllers/WalletHostPollingCon
 //
 const wallet_currencies =
 {
-	xmr: 'xmr'
+	xmr: 'tokl'
 }
 const humanReadable__wallet_currencies =
 {
-	xmr: 'XMR'
+	xmr: 'TOKL'
 }
 //
 // Shared utility functions (these can be factored out)
@@ -186,7 +186,7 @@ class Wallet extends EventEmitter
 					throw "self.mnemonic_wordsetName not found"
 				}
 				self.generatedOnInit_walletDescription = 
-				{ // this structure here is an artifact of a previous organization of the mymonero-core-js code. it should/can be phased out
+				{ // this structure here is an artifact of a previous organization of the mytokl-core-js code. it should/can be phased out
 					seed: ret.sec_seed_string,
 					mnemonicString: ret.mnemonic_string,
 					keys: {
@@ -1262,7 +1262,7 @@ class Wallet extends EventEmitter
 			3: "This wallet must first be imported.",
 			4: "Please specify the recipient of this transfer.",
 			5: "Couldn't resolve this OpenAlias address.",
-			6: "Couldn't validate destination Monero address.",
+			6: "Couldn't validate destination Toklio address.",
 			7: "Please enter a valid payment ID.",
 			8: "Couldn't construct integrated address with short payment ID.",
 			9: "The amount you've entered is too low.",

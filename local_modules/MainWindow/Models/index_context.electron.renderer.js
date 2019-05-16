@@ -165,7 +165,7 @@ function NewHydratedContext(
 ) {
 	var initialContext =
 	{
-		nettype: require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/nettype').network_type.MAINNET, // critical setting
+		nettype: require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/nettype').network_type.MAINNET, // critical setting
 		app: app,
 		menuController: menuController,
 		appUpdatesController: appUpdatesController,
@@ -177,7 +177,7 @@ function NewHydratedContext(
 		TabBarView_thickness: 79,
 		rootViewFooterHeight: 0, // because we're not implementing any footer in Desktop mode
 		TabBarView_isHorizontalBar: false,
-		appDownloadLink_domainAndPath: "mymonero.com",
+		appDownloadLink_domainAndPath: "tokl.io",
 		HostedMoneroAPIClient_DEBUGONLY_mockSendTransactionSuccess: false && process.env.NODE_ENV === 'development',
 		monero_utils: monero_utils
 	}

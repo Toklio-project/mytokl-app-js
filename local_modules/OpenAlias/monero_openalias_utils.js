@@ -28,7 +28,7 @@
 //
 "use strict"
 //
-const monero_config = require('../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_config')
+const monero_config = require('../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_config')
 // ^-- TODO: remove this
 //
 const openalias_utils = require('./openalias_utils')
@@ -99,7 +99,7 @@ function ResolvedMoneroAddressInfoFromOpenAliasAddress(
 			try { // verify address is decodable for currency
 				monero_utils.decode_address(oaRecord_address, nettype)
 			} catch (e) {
-				const errStr = "Address received by parsing OpenAlias address " + oaRecord_address + " was not a valid Monero address: " + e 
+				const errStr = "Address received by parsing OpenAlias address " + oaRecord_address + " was not a valid Toklio address: " + e 
 				const error = new Error(errStr) // apparently if this is named err, JS will complain. no-semicolon parsing issue?
 				fn(error)
 				return

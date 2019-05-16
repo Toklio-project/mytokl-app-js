@@ -145,8 +145,8 @@ class ContactQRDisplayModalView extends View
 					}
 					self.context.filesystemUI.PresentDialogToSaveBase64ImageStringAsImageFile(
 						imgDataURIString,
-						"Save Monero Request",
-						"Monero request",
+						"Save Toklio Request",
+						"Toklio request",
 						function(err)
 						{
 							if (err) {

@@ -32,7 +32,7 @@ const ContactFormView = require('../../Contacts/Views/ContactFormView.web')
 const commonComponents_tables = require('../../MMAppUICommonComponents/tables.web')
 const commonComponents_activityIndicators = require('../../MMAppUICommonComponents/activityIndicators.web')
 //
-const monero_paymentID_utils = require('../../mymonero_libapp_js/mymonero-core-js/monero_utils/monero_paymentID_utils')
+const monero_paymentID_utils = require('../../mytokl_libapp_js/mytokl-core-js/monero_utils/monero_paymentID_utils')
 //
 class EditContactFromContactsTabView extends ContactFormView
 {
@@ -204,7 +204,7 @@ class EditContactFromContactsTabView extends ContactFormView
 				address__decode_result = self.context.monero_utils.decode_address(address, self.context.nettype)
 			} catch (e) {
 				__reEnableForm()
-				self.validationMessageLayer.SetValidationError("Please enter a valid Monero address") // not using the error here cause it can be pretty unhelpful to the lay user
+				self.validationMessageLayer.SetValidationError("Please enter a valid Toklio address") // not using the error here cause it can be pretty unhelpful to the lay user
 				return
 			}
 			const integratedAddress_paymentId = address__decode_result.intPaymentId

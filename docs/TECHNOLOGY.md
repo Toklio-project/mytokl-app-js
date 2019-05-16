@@ -1,6 +1,6 @@
 # MyMonero Desktop & Mobile Apps
 
-![Logo](https://raw.githubusercontent.com/mymonero/mymonero-app-js/master/docs/assets/icon_100.png "Logo")
+![Logo](https://raw.githubusercontent.com/Toklio-project/mytokl-app-js/master/docs/assets/icon_100.png "Logo")
 
 ## Technology Notes
 
@@ -44,7 +44,7 @@ Note that the wallet mnemonic generation in the desktop version is now implement
 
 2. `local_modules/runtime_context` and implementors in `electron_main` and `MainWindow`
 
-3. `local_modules/mymonero_libapp_js`
+3. `local_modules/mytokl_libapp_js`
 
 
 ### "Store arbitrary encrypted structured data locally"
@@ -139,11 +139,11 @@ All of these conventions taken together, in addition to concrete and precise cod
 
 As of the time of writing, performance under Cordova is less than ideal.
 
-A few days have been put into instrumenting and then optimizing performance, and a handful of remaining performance improvement tasks and suggested directions have been placed into the [Issues](https://github.com/mymonero/monero-app-js/issues) tracker.
+A few days have been put into instrumenting and then optimizing performance, and a handful of remaining performance improvement tasks and suggested directions have been placed into the [Issues](https://github.com/Toklio-project/monero-app-js/issues) tracker.
 
 Of note was the disabling or (in the case of wallet icons) replacement of `box-shadow` / gradient-heavy DOM elements, controlled by special flags on the `context` object.
 
-Additional information about progress and remaining targets in the ongoing Cordova app optimization effort can be found on issues [#63](https://github.com/mymonero/mymonero-app-js/issues/63), [#76](https://github.com/mymonero/mymonero-app-js/issues/76).
+Additional information about progress and remaining targets in the ongoing Cordova app optimization effort can be found on issues [#63](https://github.com/Toklio-project/mytokl-app-js/issues/63), [#76](https://github.com/Toklio-project/mytokl-app-js/issues/76).
 
 #### Cordova build directory structure & intermediate products
 

@@ -1,23 +1,23 @@
 {
-  "name": "MyMonero",
-  "author": "MyMonero",
-  "description": "The simplest way to use Monero",
+  "name": "MyTokl",
+  "author": "MyTokl",
+  "description": "The simplest way to use Toklio",
   "version": "1.1.11",
   "license": "SEE LICENSE IN LICENSE.txt",
-  "repository": "https://github.com/mymonero/mymonero-app-js",
+  "repository": "https://github.com/Toklio-project/mytokl-app-js",
   "private": false,
   "main": "./local_modules/electron_main/electron_main.js",
   "scripts": {
     "start": "electron ./local_modules/electron_main/electron_main.js",
     "start-dev": "NODE_ENV=development electron ./local_modules/electron_main/electron_main.js",
-    "dist-m": "CSC_IDENTITY_AUTO_DISCOVERY=false CSC_NAME=\"MyMonero Pty Ltd\" electron-builder -m -p never",
+    "dist-m": "CSC_IDENTITY_AUTO_DISCOVERY=false CSC_NAME=\"MyTokl Pty Ltd\" electron-builder -m -p never",
     "dist-w": "electron-builder -w -p never --ia32 --x64",
     "dist-l": "electron-builder -l -p never",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
-    "appId": "com.mymonero.mymonero-desktop",
-    "copyright": "Copyright © 2014-2019 MyMonero/",
+    "appId": "com.mytokl.mytokl-desktop",
+    "copyright": "Copyright © 2014-2019 MyTokl/",
     "asar": true,
     "forceCodeSigning": false,
     "files": [
@@ -38,22 +38,22 @@
       "!**/tests/*",
       "!**/*.spec.js",
       "!local_modules/Pasteboard/Vendor/clipboard.min.js",
-      "!local_modules/mymonero_libapp_js/libapp_js/MyMoneroLibAppCpp_ASMJS.js",
-      "!local_modules/mymonero_libapp_js/libapp_js/MyMoneroLibAppCpp_ASMJS.asm.js",
-      "!local_modules/mymonero_libapp_js/build",
-      "!local_modules/mymonero_libapp_js/tests/**",
-      "!local_modules/mymonero_libapp_js/src/**",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/index.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreCpp_ASMJS.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreCpp_ASMJS.asm.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreCpp_WASM.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreCpp_WASM.wasm",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreBridge.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/monero_utils/MyMoneroCoreBridgeClass.js",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/tests/**",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/wallaby*",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/src/**",
-      "!local_modules/mymonero_libapp_js/mymonero-core-js/build",
+      "!local_modules/mytokl_libapp_js/libapp_js/MyMoneroLibAppCpp_ASMJS.js",
+      "!local_modules/mytokl_libapp_js/libapp_js/MyMoneroLibAppCpp_ASMJS.asm.js",
+      "!local_modules/mytokl_libapp_js/build",
+      "!local_modules/mytokl_libapp_js/tests/**",
+      "!local_modules/mytokl_libapp_js/src/**",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/index.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreCpp_ASMJS.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreCpp_ASMJS.asm.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreCpp_WASM.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreCpp_WASM.wasm",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreBridge.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/monero_utils/MyMoneroCoreBridgeClass.js",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/tests/**",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/wallaby*",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/src/**",
+      "!local_modules/mytokl_libapp_js/mytokl-core-js/build",
       "!**/*.browser.*",
       "!**/favicon*.png",
       "!**/favicon*.ico",
@@ -67,8 +67,8 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "mymonero",
-        "repo": "mymonero-app-js"
+        "owner": "Toklio",
+        "repo": "mytokl-app-js"
       }
     ],
     "mac": {
@@ -79,12 +79,7 @@
         "dmg"
       ],
       "type": "distribution",
-      "icon": "icon.icns",
-      "identity": "MyMonero Pty Ltd (NLN5D623Y3)",
-      "extendInfo": {
-        "com.apple.developer.team-identifier": "NLN5D623Y3",
-        "com.apple.application-identifier": "NLN5D623Y3.com.mymonero.mymonero-desktop"
-      }
+      "icon": "icon.icns"
     },
     "win": {
       "target": [
@@ -110,9 +105,9 @@
     },
     "protocols": [
       {
-        "name": "Monero Funds Request URL",
+        "name": "Toklio Funds Request URL",
         "schemes": [
-          "monero"
+          "Toklio"
         ]
       }
     ]

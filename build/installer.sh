@@ -1,10 +1,10 @@
 !macro customInstall
-  DetailPrint "Register monero URI Handler"
-  DeleteRegKey HKCR "monero"
-  WriteRegStr HKCR "monero" "" "URL:monero"
-  WriteRegStr HKCR "monero" "URL Protocol" ""
-  WriteRegStr HKCR "monero\DefaultIcon" "" "$INSTDIR\${APP_EXECUTABLE_FILENAME}"
-  WriteRegStr HKCR "monero\shell" "" ""
-  WriteRegStr HKCR "monero\shell\Open" "" ""
-  WriteRegStr HKCR "monero\shell\Open\command" "" "$INSTDIR\${APP_EXECUTABLE_FILENAME} %1"
+  DetailPrint "Register tokl URI Handler"
+  DeleteRegKey HKCR "toklio"
+  WriteRegStr HKCR "toklio" "" "URL:toklio"
+  WriteRegStr HKCR "toklio" "URL Protocol" ""
+  WriteRegStr HKCR "toklio\DefaultIcon" "" "$INSTDIR\${APP_EXECUTABLE_FILENAME}"
+  WriteRegStr HKCR "toklio\shell" "" ""
+  WriteRegStr HKCR "toklio\shell\Open" "" ""
+  WriteRegStr HKCR "toklio\shell\Open\command" "" "$INSTDIR\${APP_EXECUTABLE_FILENAME} %1"
 !macroend

@@ -63,10 +63,10 @@ window.BootApp = function()
 	//
 	// context
 	var isHorizontalBar = isMobile;
-	require('../../mymonero_libapp_js/libapp_js/MyMoneroLibAppBridge')({}).then(function(coreBridge_instance) // we can just use this directly in the browser version
+	require('../../mytokl_libapp_js/libapp_js/MyMoneroLibAppBridge')({}).then(function(coreBridge_instance) // we can just use this directly in the browser version
 	{
 		const context = require('../Models/index_context.browser').NewHydratedContext({
-			nettype: require('../../mymonero_libapp_js/mymonero-core-js/cryptonote_utils/nettype').network_type.MAINNET, // critical setting
+			nettype: require('../../mytokl_libapp_js/mytokl-core-js/cryptonote_utils/nettype').network_type.MAINNET, // critical setting
 			app: app,
 			isDebug: isDebug,
 			isLiteApp: true, // used sparingly for to disable (but not redact) functionality
@@ -82,9 +82,9 @@ window.BootApp = function()
 			ThemeController_isMobileBrowser: isMobile == true,
 			Tooltips_nonHoveringBehavior: isMobile == true, // be able to dismiss on clicks etc
 			Emoji_renderWithNativeEmoji: isMobile == true, // b/c this is a browser, we could be on desktop, i.e. w/o guaranteed native emoji support
-			// TODO: detect if Mac … if so, render w/o native emoji (need holistic fallback solution though - see Gitlab post referenced by https://github.com/mymonero/mymonero-app-js/issues/194)
+			// TODO: detect if Mac … if so, render w/o native emoji (need holistic fallback solution though - see Gitlab post referenced by https://github.com/Toklio-project/mytokl-app-js/issues/194)
 			//
-			appDownloadLink_domainAndPath: "mymonero.com",
+			appDownloadLink_domainAndPath: "tokl.io",
 			Settings_shouldDisplayAboutAppButton: true, // special case - since we don't have a system menu to place it in
 			HostedMoneroAPIClient_DEBUGONLY_mockSendTransactionSuccess: false,
 			Views_selectivelyEnableMobileRenderingOptimizations: isMobile === true,

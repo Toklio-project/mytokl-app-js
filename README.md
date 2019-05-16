@@ -1,6 +1,6 @@
 # MyMonero Desktop + Web Wallet 
 
-![Logo](https://raw.githubusercontent.com/mymonero/mymonero-app-js/master/docs/assets/icon_100.png "Logo")
+![Logo](https://raw.githubusercontent.com/Toklio-project/mytokl-app-js/master/docs/assets/icon_100.png "Logo")
 
 
 ### Info
@@ -29,7 +29,7 @@ All app source code and assets copyright © 2014-2019 by MyMonero. All rights re
 
 ## Downloads
 
-Download the latest version from our website at [mymonero.com](https://www.mymonero.com) or from the Releases tab.
+Download the latest version from our website at [tokl.io](https://www.tokl.io) or from the Releases tab.
 
 Developers and pre-release testers who would like to use and work on the app can run it by obtaining the source and running one of the build commands below.
 
@@ -54,11 +54,11 @@ The desktop app is built on [Electron](https://electron.atom.io) and can be pack
 
 ## Reporting Bugs & Making Feature Requests
 
-If you would like to report an issue or share a feature request, please create a Github [Issue](https://github.com/mymonero/monero-app-js/issues) on this project.
+If you would like to report an issue or share a feature request, please create a Github [Issue](https://github.com/Toklio-project/monero-app-js/issues) on this project.
 
 If you're reporting a bug, be sure to include all information which we would need to reproduce the issue, such as the operating system and app version on which you saw the bug, and the steps you took, if you can tell. 
 
-Please don't use the Issues tracker for general support or inquiries. You can also [contact us](https://mymonero.com/support) directly.
+Please don't use the Issues tracker for general support or inquiries. You can also [contact us](https://tokl.io/support) directly.
 
 
 # Contributing & Testing
@@ -147,7 +147,7 @@ For background on this project, see [Why We Built the Native Apps](./docs/WHY_NA
 
 You may also like to read the unofficial [Technology Roadmap](./docs/ROADMAP.md) to get a peek at what we're thinking about for the future.
 
-There's also an icebox of ideas, features, improvements, known issues, and other todos waiting to be knocked out which are kept in the [Issues](https://github.com/mymonero/monero-app-js/issues) tracker.
+There's also an icebox of ideas, features, improvements, known issues, and other todos waiting to be knocked out which are kept in the [Issues](https://github.com/Toklio-project/monero-app-js/issues) tracker.
 
 
 ### Donating

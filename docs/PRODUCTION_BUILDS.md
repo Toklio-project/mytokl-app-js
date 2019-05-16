@@ -1,6 +1,6 @@
 # MyMonero Desktop & Mobile Apps
 
-![Logo](https://raw.githubusercontent.com/mymonero/mymonero-app-js/master/docs/assets/icon_100.png "Logo")
+![Logo](https://raw.githubusercontent.com/Toklio-project/mytokl-app-js/master/docs/assets/icon_100.png "Logo")
 
 ## Packaging the Desktop App for Production Mode
 
