@@ -116,7 +116,7 @@ class MenuController extends MenuController_Abstract
 			const submenu = 
 			[
 				{
-					label: 'About MyMonero',
+					label: 'About MyTokl',
 					click: function(menuItem, browserWindow, event)
 					{
 						self.context.aboutWindowController.MakeKeyAndVisible()
@@ -309,7 +309,7 @@ class MenuController extends MenuController_Abstract
 			const submenu = 
 			[
 				{
-					label: 'MyMonero.com',
+					label: 'MyTokl.com',
 					click: function(menuItem, browserWindow, event)
 					{
 						shell.openExternal('https://tokl.io/')

@@ -322,7 +322,7 @@ class SendFundsView extends View
 			breakingDiv.appendChild(layer)
 		}
 		{
-			const tooltipText = "Based on Toklio network<br/>fee estimate (not final).<br/><br/>MyMonero does not charge<br/>a transfer service fee."
+			const tooltipText = "Based on Toklio network<br/>fee estimate (not final).<br/><br/>MyTokl does not charge<br/>a transfer service fee."
 			const view = commonComponents_tooltips.New_TooltipSpawningButtonView(tooltipText, self.context)
 			const layer = view.layer
 			breakingDiv.appendChild(layer)
@@ -1987,16 +1987,16 @@ class SendFundsView extends View
 				//
 				const code = jsQR(imageData.data, imageData.width, imageData.height)
 				if (!code || !code.location) {
-					self.validationMessageLayer.SetValidationError("MyMonero was unable to find a QR code in that image.")
+					self.validationMessageLayer.SetValidationError("MyTokl was unable to find a QR code in that image.")
 					return
 				}
 				const stringData = code.data
 				if (!stringData) {
-					self.validationMessageLayer.SetValidationError("MyMonero was unable to decode a QR code from that image.")
+					self.validationMessageLayer.SetValidationError("MyTokl was unable to decode a QR code from that image.")
 					return
 				}
 				if (typeof stringData !== 'string') {
-					self.validationMessageLayer.SetValidationError("MyMonero was able to decode QR code but got unrecognized result.")
+					self.validationMessageLayer.SetValidationError("MyTokl was able to decode QR code but got unrecognized result.")
 					return
 				}
 				const possibleURIString = stringData

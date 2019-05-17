@@ -402,7 +402,7 @@ class FundsRequestDetailsView extends View
 		value += "<p>---------------------------</p>"
 		value += `<p>If you have MyTokl installed, <a href="${self.fundsRequest.Lazy_URI__addressAsAuthority()}">press this link to send the funds</a>.</p>`
 		const appDownloadLink_domainAndPath = self.context.appDownloadLink_domainAndPath
-		value += `<p>If you don't have MyMonero installed, download it from <a href="https://${appDownloadLink_domainAndPath}">${appDownloadLink_domainAndPath}</a>.</p>`
+		value += `<p>If you don't have MyTokl installed, download it from <a href="https://${appDownloadLink_domainAndPath}">${appDownloadLink_domainAndPath}</a>.</p>`
 		//
 		return value
 	}
