@@ -1,4 +1,4 @@
 module.exports = 
 {
-	API__authority: "wallet-api-tokl.pyrexcoin.com"
+	API__authority: "35.190.184.28:1985"
 }
